@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengajuan Cinta</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FF69B4; /* Pink tua */
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: #FFC0CB; /* Pink muda */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #btn_gamau {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <!-- Audio yang akan dimainkan saat tombol "Mau" ditekan -->
+  <audio id="audio" src="wannabeurs.mp3"></audio>
+
+  <div class="container">
+    <h1>Hai Najwa Wahia Almaira Kuswono Cantikkk!</h1>
+    <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" alt="Love GIF" />
+    <h1>Maukah kamu menjadi pacarku babyyyy?</h1>
+    <button id="btn_mau" onclick="playAudio()">Mau</button>
+    <button id="btn_gamau" onclick="gamau(this)">Gamau</button>
+  </div>
+
+  <script>
+    function playAudio() {
+      var audio = document.getElementById("audio");
+      audio.play(); // Mulai memutar audio
+      alert('I LOVE YOU');
+    }
+
+    function gamau(id) {
+      var mau = document.getElementById("btn_mau");
+      var i = Math.floor(Math.random() * 300) + 1;
+      var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+      id.style.left = i + "px";
+      id.style.top = j + "px";
+    }
+  </script>
+</body>
+</html>
